@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitals - Patient</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body onload="startTypingEffect()">
+ 
+  
+  <div id="container">
+    
+        <div class="Logo-logout">
+          <div class="logo"><img src="Images/Logo.webp" alt="logo"></div>
+            <!-- add link -->
+            <a href=""> <img src="Images/Logout.svg" alt="Logout" id="logout"></a>
+        </div>
+         <!-- Welcome message -->
+        <h1 id="welcome-message">Welcome Jhon!</h1>  
+      
+         <!-- User Information -->
+      <div class="UserInfo">
+
+        <div class="profile-layout">
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <div class="image-container">
+              <img src="Images/UserProfile.jpg" alt="Photo" class="user-image">
+            </div>
+            <p class="user-name">Jhon Doe</p>
+           
+          </div>
+    
+          <!-- Information Card -->
+          <div class="info-card">
+            <div class="info-item">
+              <img src="Images/IdIcon.svg" alt="" class="icon">
+              <span><strong>ID:</strong> 1123155543</span>
+            </div>
+            <div class="info-item">
+              <img src="Images/Gender.svg" alt="" class="icon">
+              <span><strong>Gender:</strong> Male</span>
+            </div>
+            <div class="info-item">
+                <img src="Images/DOBIcon.svg" alt="" class="icon">
+                <span><strong>DOB:</strong> 01/05/1984</span>
+              </div>
+            <div class="info-item">
+              <img src="Images/EmailIcon.svg" alt="" class="icon">
+              <span><strong>Email:</strong> Jhon@gamil.com</span>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    <div class="info">
+        <p>
+         <button id="Book_Appointment" > Book An Appointment</button>
+          
+        </p>
+
+      </div>
+
+      
+
+  </div>
+
+      <!-- Tabels -->
+
+      <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Upcoming Appointments</h1>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>  Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>  Time <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Doctors Photo  <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Doctors name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> 12/04/25</td>
+                    <td> 12:00 </td>
+                    <td><img src="images/profile-pic2.png" alt=""> </td>
+                    <td> Dr. Rehab</td>
+                    <td>
+                      <p class="status confirmed">Confirmed</p>
+                  </td>
+                  <td>
+                    <button class="cancel">Cancel</button>
+                </td>
+                  </tr>
+                    <tr>
+                      <td> 12/04/25</td>
+                      <td> 12:00 </td>
+                      <td><img src="Images/profile-pic3.png" alt=""> </td>
+                      <td> Dr. Rahaf</td>
+                      <td>
+                        <button class="pending">Pending</button>
+                    </td>
+                    <td>
+                      <button class="cancel">Cancel</button>
+                  </td>
+                    </tr>
+                    <tr>
+                      <td> 29/05/25</td>
+                      <td> 15:00 </td>
+                      <td><img src="images/profile-pic1.png" alt=""> </td>
+                      <td> Dr. Saud</td>
+                      <td>
+                        <button class="pending">Pending</button>
+                    </td>
+                    <td>
+                      <button class="cancel">Cancel</button>
+                  </td>
+                    </tr>
+                  
+                 
+                </tbody>
+            </table>
+         
+        </section>
+  
+    </main>
+ 
+
+
+
+</body>
+</html>  

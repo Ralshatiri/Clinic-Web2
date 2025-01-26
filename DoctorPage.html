@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitals - Doctor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body onload="startTypingEffect()">
+ 
+  
+  <div id="container">
+        <div class="Logo-logout">
+              <div class="logo"><img src="Images/Logo.webp" alt="logo"></div>
+             <!-- add link -->
+              <a href=""> <img src="Images/Logout.svg" alt="Logout" id="logout"></a>
+        </div>
+      
+        <!-- Welcome message -->
+        <h1 id="welcome-message">Welcome Jhon!</h1>
+
+        <!-- User Information -->
+    <div class="UserInfo">
+        <div class="profile-layout">
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <div class="image-container">
+              <img src="Images/profile-pic1.png" alt="Photo" class="user-image">
+            </div>
+            <p class="user-name">Dr. Jhon Doe</p>
+            <p class="doctor-specialty">Dermatologist</p>
+          </div>
+    
+          <!-- Information Card -->
+          <div class="info-card">
+            <div class="info-item">
+              <img src="Images/IdIcon.svg" alt="ID Icon" class="icon">
+              <span><strong>ID:</strong> 1123155543</span>
+            </div>
+            <div class="info-item">
+              <img src="Images/SpecialityIcon.svg" alt="Specialty Icon" class="icon">
+              <span><strong>Specialty:</strong> Dermatology</span>
+            </div>
+            <div class="info-item">
+              <img src="Images/EmailIcon.svg" alt="Email Icon" class="icon">
+              <span><strong>Email:</strong> Jhon@gamil.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+ 
+    <div class="info">
+       
+         <q> Wherever the art of Medicine is loved, there is also a love of Humanity.</q>
+        <p>― Hippocrates</p>
+
+      </div>
+
+      
+
+  </div>
+
+      <!-- Tabels -->
+
+      <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Upcoming Appointments</h1>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>  Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th>  Time <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Patient  <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> age <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> gender <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Reason For Visit <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 11/03/25</td>
+                        <td> 13:00 </td>
+                        <td>  Saud Abdullah  </td>
+                        <td>20 </td>
+                        <td>Male </td>
+                        <td> Headache </td>
+                        <td>
+                            <p class="status confirmed">Confirmed</p>
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                      <td> 12/03/25</td>
+                      <td> 12:00 </td>
+                      <td> Layan Khaled</td>
+                      <td>25</td>
+                      <td>Female </td>
+                      <td> Backpain </td>
+                      <td>
+                        <button class="pending">Confirm</button>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td> 18/03/25</td>
+                      <td> 15:00 </td>
+                      <td> Sara Mohammad</td>
+                      <td>32</td>
+                      <td>Female </td>
+                      <td> Broken Elbow </td>
+                      <td>
+                        <p class="status cancelled">Cancelled</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 18/03/25</td>
+                      <td> 16:00 </td>
+                      <td> Sultan Abdulaziz</td>
+                      <td>42</td>
+                      <td>Male </td>
+                      <td> Stomach ache</td>
+                      <td>
+                        <p class="status confirmed">Confirmed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 20/04/25</td>
+                      <td> 11:00 </td>
+                      <td> Maha Ahmad</td>
+                      <td>12</td>
+                      <td>Female </td>
+                      <td> Headache</td>
+                      <td>
+                        <button class="pending">Confirm</button>
+                    </td>
+                    </tr>
+                 
+                </tbody>
+            </table>
+          </section>
+          <section class="table__header">
+            <h1>Your Patients</h1>
+        </section>
+
+          <section class="table__body">
+            <table>
+              <thead>
+                  <tr>
+                      <th>  Name <span class="icon-arrow">&UpArrow;</span></th>
+                      <th>  Age <span class="icon-arrow">&UpArrow;</span></th>
+                      <th> Gender  <span class="icon-arrow">&UpArrow;</span></th>
+                      <th> Medication <span class="icon-arrow">&UpArrow;</span></th>
+                      <th> </th>
+                    
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                   
+                      <td>  Lana Saad  </td>
+                      <td>22 </td>
+                      <td>Female </td>
+                      <td> Antibiotics </td>
+                      <td>
+                        <a href="" class="prescribe">prescribe</a>
+                      </td>
+                    
+                  </tr>
+                  <tr>
+                   
+                    <td>  Reham Ali  </td>
+                    <td>38 </td>
+                    <td>Female </td>
+                    <td> Ibruprofen </td>
+                    <td>
+                        <a href="" class="prescribe">prescribe</a>
+                    </td>
+                  
+                </tr>
+                 
+               
+              </tbody>
+          </table>
+        </section>
+  
+    </main>
+ 
+
+    
+
+</body>
+</html>   
