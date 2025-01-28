@@ -10,6 +10,9 @@ body {
 #container{
   color: #fff;
   background: linear-gradient(135deg, #000428, #004e92);
+  /* background-image: url("Images/IMG_8874.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
 
 }
 #logout{
