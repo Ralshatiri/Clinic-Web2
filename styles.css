@@ -49,7 +49,7 @@
 background-color: #013f75; /* Change background on focus */
 outline: none;
 }
-h2 {
+.h2 {
     text-align: center;
     margin-bottom: 20px;
     color: white; /* Accent color */
@@ -88,7 +88,7 @@ select:focus, input:focus, textarea:focus {
 background-color: #013f75; /* Change background on focus */
 outline: none;
 }
-button {
+.btne {
     margin-top: 20px;
     padding: 10px;
     background-color: #004e92; /* Button color */
@@ -100,11 +100,11 @@ button {
     transition: background-color 0.3s, transform 0.2s;
     width: 100%; /* Full width button */
 }
-button:hover {
+.btne:hover {
     background-color: #013f75; /* Darker shade on hover */
     transform: translateY(-2px);
 }
-button:active {
+.btne:active {
     transform: translateY(1px);
 }
 .checkbox-group {

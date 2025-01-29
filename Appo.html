@@ -8,7 +8,9 @@
 </head>
 <body class="f">
  <div class="container">
+  <div class="h2">
    <h2>Book an Appointment</h2>
+  </div>
    <form id="appointmentForm" action="/submit-appointment" method="POST" onsubmit="return handleSubmit()">
        <label for="specialty">Select Specialty:</label>
        <select id="specialty" name="specialty" onchange="updateDoctors()">
@@ -32,7 +34,7 @@
     <label for="reason">Reason for Visit:</label>
     <textarea id="reason" name="reason" rows="4" required></textarea>
 
-    <button type="submit">Submit Booking</button>
+    <button class="btne" type="submit">Sumbit Booking</button>
     </form>
  </div>
 
