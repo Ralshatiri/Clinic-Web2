@@ -23,7 +23,6 @@ body {
 
 
 
-
 #logout{
   width: 50px;
   margin: 0;
@@ -40,14 +39,27 @@ body {
   z-index: 100;
 }
 
-/* Top Buttons (Sign Up & Log Out) */
+.Logo-logout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  height: 70px; 
+}
+
+.Logo img {
+  max-width: 60%; 
+  height: auto;
+}
+
+
 .top-btn {
   background: #2b6cb0;
   color: white;
   border: none;
-  padding: 12px 25px;  /* Adjusted padding for oval shape */
+  padding: 12px 25px;  
   font-size: 16px;
-  border-radius: 30px; /* Makes it oval */
+  border-radius: 30px; 
   cursor: pointer;
   transition: 0.3s;
 
@@ -85,7 +97,6 @@ body {
   text-align: center;
   padding: 40px 20px;
   background: #fff;
-  color: #000428;
   width: 60%;
   margin: 0 auto;
   margin-top: 100px;
@@ -101,6 +112,7 @@ body {
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.5;
+  color: #000428;
 }
 
 
@@ -371,17 +383,20 @@ tbody tr.hide td img {
 }
 /* for patients page only*/
 .prescribe{
+  text-decoration: none;
   padding: 0.4rem 2rem;
   text-align: center;
   font-size: 14px;
   display: inline-block;
   cursor: pointer;
-  color: #004e92;
+  color: white;
   font-weight: bold;
+  border: 1px solid;
+  border-radius:  10px;;
+  background-color:#004e92 ;
 }
 .prescribe:hover{
-  font-size: 16px;
-  color: #3f74a3;
+  background-color: #215b8d;
 }
 
 
@@ -507,9 +522,13 @@ footer {
 
 
 /* Specialists Section */
-.specialists {
+.specialists ,.specialists h2 {
   text-align: center;
   padding: 200px 150px 100px ;
+  color: #000;
+}
+.specialists h3{
+  color: #000;
 }
 
 .specialist-container {
@@ -696,16 +715,16 @@ footer {
 .login-page {
   font-family: Arial, sans-serif;
   background: url("Images/logins.jpg") no-repeat center center fixed;
-  background-size: cover; /* Ensures the image covers the entire screen */
+  background-size: cover; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  backdrop-filter: blur(5px); /* Adds blur effect */
+  backdrop-filter: blur(5px); 
 }
 
-/* Dark Overlay for Better Contrast */
+
 .login-page::before {
   content: "";
   position: absolute;
@@ -713,6 +732,9 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background:  #0004286e; /* Dark transparent layer */
+  background:  #0004286e; 
   z-index: -1;
 }
+
+
+/************************************************************** */
