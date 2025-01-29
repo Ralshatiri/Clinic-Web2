@@ -61,4 +61,30 @@ function startTypingEffect() {
     typeEffect();
   }
   
-  
+
+
+/////explore button in home///
+
+// Wait for DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+
+    /// Explore More button in home ///
+    let exploreButton = document.querySelector('.cta-btn'); // Corrected selection
+
+    if (exploreButton) {
+        exploreButton.addEventListener('click', function () {
+            let targetSection = document.querySelector('.info'); // Corrected target section
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                console.error("Error: Target section '.info' not found.");
+            }
+        });
+    } else {
+        console.error("Error: Explore More button not found.");
+    }
+
+});
