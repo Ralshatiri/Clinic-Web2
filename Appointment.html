@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitals - Appointment Booking</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #000428, #004e92);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #004e92;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    select {
+      background-color: #f8f9fa;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .btne {
+      width: 100%;
+      padding: 15px;
+      background-color: #004e92;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btne:hover {
+      background-color: #0c5494;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book an Appointment</h2>
+    
+    <form id="specialtyForm" onsubmit="return showSecondForm()">
+      <label for="specialty">Select Specialty:</label>
+      <select id="specialty" name="specialty">
+        <option value="">--Select Specialty--</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="neurology">Neurology</option>
+      </select>
+
+      <button class="btne" type="submit">Submit Specialty</button>
+    </form>
+
+    <form id="appointmentForm" action="/submit-appointment" method="POST" onsubmit="return handleSubmit()">
+      <div id="doctorSection" style="display:none;">
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor">
+          <option value="">--Select Doctor--</option>
+        </select>
+
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="reason">Reason for Visit:</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <button class="btne" type="submit">Submit Booking</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function showSecondForm() {
+      const specialty = document.getElementById('specialty').value;
+      if (specialty) {
+        document.getElementById('specialtyForm').style.display = 'none';
+        document.getElementById('doctorSection').style.display = 'block';
+        updateDoctors(specialty);
+      }
+      return false;
+    }
+
+    function updateDoctors(specialty) {
+      const doctorSelect = document.getElementById('doctor');
+      doctorSelect.innerHTML = '<option value="">--Select Doctor--</option>';
+      const doctors = {
+        cardiology: ['Dr. Smith', 'Dr. Jones'],
+        dermatology: ['Dr. Brown', 'Dr. Taylor'],
+        neurology: ['Dr. Wilson', 'Dr. Lee']
+      };
+
+      if (doctors[specialty]) {
+        doctors[specialty].forEach(doctor => {
+          const option = document.createElement('option');
+          option.value = doctor;
+          option.textContent = doctor;
+          doctorSelect.appendChild(option);
+        });
+      }
+    }
+
+    function handleSubmit() {
+      window.location.href = 'PatientPage.html';
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitals - Sign/Log In</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-box login">
+            <form id="loginform">
+                <h1>Login</h1>
+                <div class="wrapper">
+ <input type="radio" name="select" id="option-1" value="Patient">
+ <input type="radio" name="select" id="option-2"value="Doctor">
+   <label for="option-1" class="option option-1">
+     <div class="dot"></div>
+      <span>Patient</span>
+      </label>
+   <label for="option-2" class="option option-2">
+     <div class="dot"></div>
+      <span>Doctor</span>
+   </label>
+</div>
+        
+                <div class="input-box">
+                    <input type="email" placeholder="email" >
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" >
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+               
+                <button type="submit" class="btn">Login</button>
+              
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form  id= "registerform">
+              <h1>Sign Up</h1>
+              <div class="wrapper">
+                  <input type="radio" name="select2" id="option-11" value="Patient">
+                  <input type="radio" name="select2" id="option-22" value="Doctor">
+                  
+                  <label for="option-11" class="option option-1">
+                      <div class="dot"></div>
+                      <span>Patient</span>
+                  </label>
+              
+                  <label for="option-22" class="option option-2">
+                      <div class="dot"></div>
+                      <span>Doctor</span>
+                  </label>
+              </div>
+              
+       
+              <div id="doctor-fields">
+                  <div class="input-box">
+                      <input type="text" id="doctor-fname" name="firstname" placeholder="First name" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" id="doctor-lname" name="lastname" placeholder="Last name" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" id="doctor-id" name="idD" placeholder="DOCTOR ID" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <select class="fill" id="doctor-speciality" name="speciality" >
+                          <option value="cardiology">Cardiology</option>
+                          <option value="neurology">Neurology</option>
+                          <option value="orthopedics">Orthopedics</option>
+                          <option value="pediatrics">Pediatrics</option>
+                      </select>
+                  </div>
+                  <div class="input-box">
+                      <input type="file" id="doctor-photo" name="photo" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                    <input  type="email" id="doctor-email" name="email"placeholder="Email" >
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                  <input  type="password" id="doctor-password" name="password" placeholder="Password">
+                  <i class='bx bxs-envelope'></i>
+              </div>
+              </div>
+              
+              <!-- Patient Fields (Initially Hidden) -->
+              <div id="patient-fields" style="display: none;">
+                  <div class="input-box">
+                      <input type="text" id="patient-fname" name="patient_firstname" placeholder="First name" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" id="patient-lname" name="patient_lastname" placeholder="Last name" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" id="patient-age" name="Gender" placeholder="Gender" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                      <input type="text" id="patient-id" name="patient_id" placeholder="PATIENT ID" >
+                      <i class='bx bxs-envelope'></i>
+                  </div>
+
+                  <div class="input-box">
+                    <input class="fill" type="date" id="patient-dob" name="dob" >
+                    <i class='bx bxs-envelope'></i>
+                </div>
+
+                  <div class="input-box">
+                    <input  type="email" id="doctor-email" name="email"placeholder="Email" >
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                  <input  type="password" id="doctor-password" name="password" placeholder="Password">
+                  <i class='bx bxs-envelope'></i>
+              </div>
+              </div>
+              
+              <button type="submit" class="btn" >Sign Up</button>
+              
+                
+            </form>
+        </div>
+
+
+        
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">Sign Up</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

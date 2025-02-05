@@ -1,5 +1,3 @@
-
-
 const search = document.querySelector('.input-group input'),
     table_rows = document.querySelectorAll('tbody tr'),
     table_headings = document.querySelectorAll('thead th');
@@ -63,18 +61,17 @@ function startTypingEffect() {
   
 
 
-/////explore button in home///
 
-// Wait for DOM to fully load
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    /// Explore More button in home ///
-    let exploreButton = document.querySelector('.cta-btn'); // Corrected selection
+  
+    let exploreButton = document.querySelector('.cta-btn'); 
 
     if (exploreButton) {
         exploreButton.addEventListener('click', function () {
-            let targetSection = document.querySelector('.info'); // Corrected target section
-
+            let targetSection = document.querySelector('.specialists'); 
             if (targetSection) {
                 targetSection.scrollIntoView({
                     behavior: 'smooth'
@@ -88,3 +85,77 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+
+    // 4. Login & Sign-Up
+    const container = document.querySelector('.container');
+    const registerBtn = document.querySelector('.register-btn');
+    const loginBtn = document.querySelector('.login-btn');
+
+    if (registerBtn && loginBtn) {
+        registerBtn.addEventListener('click', () => container.classList.add('active'));
+        loginBtn.addEventListener('click', () => container.classList.remove('active'));
+    }
+
+    const loginForm = document.getElementById("loginform");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const role = document.querySelector('input[name="select"]:checked');
+
+            if (!role) {
+                alert("Please select a role (Patient or Doctor).");
+                return;
+            }
+
+            console.log("Login role selected:", role.value);
+            window.location.href = role.value === "Patient" ? "PatientPage.html" : "DoctorPage.html";
+        });
+    }
+
+    // 5. Patient & Doctor Registration Form Handling
+    const doctorFields = document.getElementById("doctor-fields");
+    const patientFields = document.getElementById("patient-fields");
+    const doctorRadio = document.getElementById("option-22");
+    const patientRadio = document.getElementById("option-11");
+    const registerForm = document.getElementById("registerform");
+
+    if (doctorFields && patientFields) {
+        doctorFields.style.display = "none";
+        patientFields.style.display = "none";
+    }
+
+    function toggleFields() {
+        if (doctorRadio && doctorRadio.checked) {
+            doctorFields.style.display = "block";
+            patientFields.style.display = "none";
+        } else if (patientRadio && patientRadio.checked) {
+            doctorFields.style.display = "none";
+            patientFields.style.display = "block";
+        }
+    }
+
+    if (doctorRadio && patientRadio) {
+        doctorRadio.addEventListener("change", toggleFields);
+        patientRadio.addEventListener("change", toggleFields);
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("Registration form submitted!");
+
+            if (doctorRadio && doctorRadio.checked) {
+                console.log("Redirecting to DoctorPage.html...");
+                window.location.href = "DoctorPage.html";
+            } else if (patientRadio && patientRadio.checked) {
+                console.log("Redirecting to PatientPage.html...");
+                window.location.href = "PatientPage.html";
+            } else {
+                alert("Please select either Doctor or Patient.");
+            }
+        });
+    } else {
+        console.error("Register form not found!");
+    }
